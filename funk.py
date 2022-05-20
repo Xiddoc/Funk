@@ -2,10 +2,9 @@ import tkinter as tk
 import timeit
 from threading import Thread
 import tkinter.messagebox as msg
-import requests
 import sys
 import os
-from FormsAPI import send_form
+from libs.FormsAPI import send_form
 from concurrent.futures import ThreadPoolExecutor
 from traceback import format_exc
 
@@ -87,7 +86,7 @@ def smashThread():
 # Init GUI
 root = tk.Tk()
 root.title("Google Forms Flooder")
-root.iconbitmap(resource_path("icon.ico"))
+root.iconbitmap(resource_path("resources/icon.ico"))
 root.geometry("500x200")
 root.resizable(width=False, height=False)
 
