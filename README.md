@@ -1,7 +1,19 @@
-# GoogleFormsFlooder
+# Funk
 
-Floods Google Forms! Made for educational purposes only. Use at your own risk & responsibility. More legal jargon to say that "you shouldn't use this to be a jerk" :)
+A Google Forms bot with a neat GUI. There's not much else to say, other than to use it responsibly.
+
+⚠️ Use at your own responsibility. The developer(s) claim no liability or responsiblity.
+
+The word "responsibility" is used a lot here... just don't be a jerk. 🙃
+
+## Installation
+
+Run the following command:
+
+```
+python -m pip install -r requirements.txt
+```
 
 ## Usage
 
-Run `formsFlooder.py`. Done.
+Run `funk.py`. Have fun! 🖥️

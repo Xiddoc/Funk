@@ -1,20 +1,16 @@
-import tkinter as tk
+"""
+Funk's main "entry" file.
+"""
+
 import timeit
-from threading import Thread
+import tkinter as tk
 import tkinter.messagebox as msg
-import requests
-import sys
-import os
-from FormsAPI import send_form
 from concurrent.futures import ThreadPoolExecutor
+from threading import Thread
 from traceback import format_exc
 
+from libs.FormsAPI import send_form
 
-def resource_path(relative_path):
-    # If compiled
-    if hasattr(sys, '_MEIPASS'):
-        return os.path.join(sys._MEIPASS, relative_path)
-    return os.path.join(os.path.abspath("."), relative_path)
 
 def enableButton():
     # Revert text
@@ -78,7 +74,7 @@ def smashThread():
         msg.showinfo(title="Finished!",
                      message=f"Form spammed {success} times in {round(timeit.default_timer() - start, 1)} seconds.")
         enableButton()
-    except Exception as e:
+    except:
         # Print traceback
         print(format_exc())
         msg.showerror(title="Error", message="Please check logs/console for more info.")
@@ -87,7 +83,7 @@ def smashThread():
 # Init GUI
 root = tk.Tk()
 root.title("Google Forms Flooder")
-root.iconbitmap(resource_path("icon.ico"))
+root.iconbitmap("resources/icon.ico")
 root.geometry("500x200")
 root.resizable(width=False, height=False)
 
